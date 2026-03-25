@@ -1,0 +1,102 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-4o-mini-2024-07-18",
+    "maxTokens": 16384,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 25
+  },
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "fieldsExtracted",
+      "category"
+    ],
+    "properties": {
+      "fieldsExtracted": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "fieldName",
+            "fieldValue"
+          ],
+          "properties": {
+            "fieldName": {
+              "type": "string"
+            },
+            "fieldValue": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "category": {
+        "type": "string"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "required": [
+      "subject",
+      "body"
+    ],
+    "properties": {
+      "subject": {
+        "type": "string",
+        "description": "Generated email subject"
+      },
+      "body": {
+        "type": "string",
+        "description": "Generated email body text"
+      }
+    }
+  },
+  "metadata": {
+    "storageVersion": "47.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": true
+  },
+  "type": "lowCode",
+  "projectId": "56ef0b65-8854-4d9b-ba4e-e793ed357ecd",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an HR Email Response Generator.\n\nYour task is to generate a professional email reply based on:\n\n- category\n- extracted HR data (fieldsExtracted)\n\nSTRICT RULES:\n\n1. If category is \"Leave Request\":\n   - Check leave balance from fieldsExtracted\n   - If leave balance > 0 → APPROVE leave\n   - If leave balance = 0 → REJECT leave\n   - Clearly mention approval/rejection\n\n2. If category is \"HR Policy Query\":\n   - Answer using extracted HR policy data\n\n3. If category is \"Expense Query\":\n   - Respond using expense-related data\n\n4. If category is \"Other\":\n   - Respond politely asking for clarification\n\nFORMAT:\n\nSubject: <relevant subject>\n\nBody:\nDear Employee,\n\n<clear, direct answer>\n\nBest Regards,\nHR Team\n\nIMPORTANT:\n- Be concise\n- Be logical\n- Do NOT give generic responses\n- Always use extracted data\n- Keep response short (2–3 lines max)\n- Avoid repeating same words\n- Use formal HR tone",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are an HR Email Response Generator.\n\nYour task is to generate a professional email reply based on:\n\n- category\n- extracted HR data (fieldsExtracted)\n\nSTRICT RULES:\n\n1. If category is \"Leave Request\":\n   - Check leave balance from fieldsExtracted\n   - If leave balance > 0 → APPROVE leave\n   - If leave balance = 0 → REJECT leave\n   - Clearly mention approval/rejection\n\n2. If category is \"HR Policy Query\":\n   - Answer using extracted HR policy data\n\n3. If category is \"Expense Query\":\n   - Respond using expense-related data\n\n4. If category is \"Other\":\n   - Respond politely asking for clarification\n\nFORMAT:\n\nSubject: <relevant subject>\n\nBody:\nDear Employee,\n\n<clear, direct answer>\n\nBest Regards,\nHR Team\n\nIMPORTANT:\n- Be concise\n- Be logical\n- Do NOT give generic responses\n- Always use extracted data\n- Keep response short (2–3 lines max)\n- Avoid repeating same words\n- Use formal HR tone"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Generate a professional HR email response using ONLY the following extracted fields:\n\nCategory:\n{{category}}\n\nExtracted Fields:\n{{fieldsExtracted}}\n\nSTRICT RULES:\n- You MUST generate BOTH Subject and Body\n- Do NOT skip Subject\n- You must use proper link breaks (each section on new line)\n- Format must be clean and structured \n- Keep response concise and professional\n\nResponse format (STRICT):\n\nSubject: <short and clear subject>\n\nBody:\nDear Employee,\n\n<clear and to-the-point response based on fieldsExtracted>\n\nBest Regards,  \nHR Team",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Generate a professional HR email response using ONLY the following extracted fields:\n\nCategory:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.category"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nExtracted Fields:\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.fieldsExtracted"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nSTRICT RULES:\n- You MUST generate BOTH Subject and Body\n- Do NOT skip Subject\n- You must use proper link breaks (each section on new line)\n- Format must be clean and structured \n- Keep response concise and professional\n\nResponse format (STRICT):\n\nSubject: <short and clear subject>\n\nBody:\nDear Employee,\n\n<clear and to-the-point response based on fieldsExtracted>\n\nBest Regards,  \nHR Team"
+        }
+      ]
+    }
+  ]
+}

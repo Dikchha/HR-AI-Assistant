@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Data_extration_agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "804886c1-7b84-4c9c-9f1f-252034acefc4",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Data_extration_agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "be1ea4f1-dd20-4dd6-b583-08d61559f519"
+  }
+}

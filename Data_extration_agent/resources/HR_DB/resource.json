@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "id": "6f7d33ed-7ea5-4c92-8c46-b5498db4d192",
+  "referenceKey": "4fc85f24-d29d-4b00-05c6-08de86acdfbd",
+  "name": "HR_DB",
+  "description": "info of emp",
+  "contextType": "index",
+  "folderPath": "solution_folder",
+  "indexName": "HR_DB",
+  "settings": {
+    "query": {
+      "description": "The query for the Semantic strategy.",
+      "variant": "dynamic"
+    },
+    "threshold": 0,
+    "resultCount": 3,
+    "retrievalMode": "semantic",
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "fileExtension": {
+      "value": "All"
+    }
+  }
+}

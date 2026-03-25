@@ -1,0 +1,44 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "HR_approval_app",
+    "kind": "app",
+    "type": "workflow Action",
+    "apiVersion": "apps.uipath.com/v1",
+    "projectKey": "8af6b9f7-9331-4ed4-9ff5-e51de185f060",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "name": "HR_approval_app",
+        "kind": "appVersion"
+      },
+      {
+        "name": "HR_approval_app",
+        "kind": "process"
+      }
+    ],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "HR_approval_app",
+      "description": null,
+      "type": "workflow Action",
+      "version": null,
+      "appSystemName": null,
+      "appVersionRef": {
+        "key": "cfa7087f-eb24-4f45-9afe-a51e8ac31391"
+      },
+      "codeBehindProcess": {
+        "key": "c9a4b834-a466-44d2-90b5-0660732b621a"
+      },
+      "actionSchema": null
+    },
+    "locks": [],
+    "key": "085c11b6-93f8-4cc6-a7bd-543f861bb73f"
+  }
+}

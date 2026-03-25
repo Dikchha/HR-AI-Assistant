@@ -1,0 +1,42 @@
+{
+  "DocVersion": "1.0.0",
+  "StudioMinVersion": "2025.04.0",
+  "SolutionId": "309f05b2-bf14-4092-3243-08de845f8a4f",
+  "Projects": [
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "Send_response/project.uiproj",
+      "Id": "85a6b857-d6f4-4672-be2d-b88d86b2a928"
+    },
+    {
+      "Type": "WebApp",
+      "ProjectRelativePath": "HR_approval_app/project.uiproj",
+      "Id": "8af6b9f7-9331-4ed4-9ff5-e51de185f060"
+    },
+    {
+      "Type": "Process",
+      "ProjectRelativePath": "HR_helpdesk_processor/project.uiproj",
+      "Id": "ba5ce9e8-e13a-492a-b539-cd1697f54459"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Request_category_agent/project.uiproj",
+      "Id": "894db433-b1aa-4d6f-b30b-113824e8bdee"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Data_extration_agent/project.uiproj",
+      "Id": "804886c1-7b84-4c9c-9f1f-252034acefc4"
+    },
+    {
+      "Type": "Agent",
+      "ProjectRelativePath": "Mail_response_agent/project.uiproj",
+      "Id": "4ef13b90-0ab3-4350-90de-0953abde177b"
+    },
+    {
+      "Type": "ProcessOrchestration",
+      "ProjectRelativePath": "Agentic flow/project.uiproj",
+      "Id": "c60c39f6-d712-456f-9fd8-c191282b6d04"
+    }
+  ]
+}

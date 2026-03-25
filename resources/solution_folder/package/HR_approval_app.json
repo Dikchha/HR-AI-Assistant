@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "HR_approval_app",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "8af6b9f7-9331-4ed4-9ff5-e51de185f060",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "HR_approval_app",
+      "description": null
+    },
+    "locks": [],
+    "key": "132f7b82-c0b7-4476-bc37-d3d689af4d86"
+  }
+}

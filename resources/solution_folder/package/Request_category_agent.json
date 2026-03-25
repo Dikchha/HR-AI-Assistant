@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "Request_category_agent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "894db433-b1aa-4d6f-b30b-113824e8bdee",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "Request_category_agent",
+      "description": null
+    },
+    "locks": [],
+    "key": "230a3049-7d6a-4bf5-802e-b645492bdd45"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "type": "agent",
+      "uniqueId": "417f2c1f-3405-421b-b876-76e60cfa16ed",
+      "input": {
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "type": "string"
+          },
+          "categoryExplanation": {
+            "type": "string"
+          },
+          "employeeEmail": {
+            "type": "string"
+          }
+        },
+        "title": "Inputs",
+        "required": [
+          "categoryName",
+          "categoryExplanation",
+          "employeeEmail"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "The status of the query (Success, Employee NotFound, or Pending)"
+          },
+          "employeeEmail": {
+            "type": "string",
+            "description": "The email address of the student"
+          },
+          "category": {
+            "type": "string",
+            "description": "The category of the query"
+          },
+          "fieldsExtracted": {
+            "type": "array",
+            "description": "Array of extracted fields and their values",
+            "items": {
+              "type": "object",
+              "properties": {
+                "fieldName": {
+                  "type": "string",
+                  "description": "Name of the extracted field"
+                },
+                "fieldValue": {
+                  "type": "string",
+                  "description": "Value of the extracted field"
+                }
+              }
+            }
+          }
+        },
+        "title": "Outputs"
+      }
+    }
+  ]
+}

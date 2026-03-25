@@ -1,0 +1,26 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "HR_helpdesk_processor",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "ba5ce9e8-e13a-492a-b539-cd1697f54459",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": null,
+      "fileReference": null,
+      "name": "HR_helpdesk_processor",
+      "description": null
+    },
+    "locks": [],
+    "key": "52a92484-f59a-4ebd-8931-9e610f723bb0"
+  }
+}

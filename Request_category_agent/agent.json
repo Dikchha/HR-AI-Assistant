@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-4o-2024-11-20",
+    "maxTokens": 16384,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 25
+  },
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "email_content"
+    ],
+    "properties": {
+      "email_content": {
+        "type": "string"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "required": [
+      "category",
+      "explanation"
+    ],
+    "properties": {
+      "category": {
+        "type": "string",
+        "description": "Output content"
+      },
+      "explanation": {
+        "type": "string"
+      }
+    }
+  },
+  "metadata": {
+    "storageVersion": "47.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": true
+  },
+  "type": "lowCode",
+  "projectId": "cf61f2d5-5cfd-43b9-a07b-adaf14478286",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an HR Email Classifier AI Assistant.\n\nYour task is to analyze employee emails and classify them into predefined categories.\n\nFollow these rules:\n\n1. Carefully read the email content.\n2. Identify the main intent of the email.\n\n3. STRICT KEYWORD RULE (VERY IMPORTANT):\n- If the email contains words like \"leave\", \"time off\", \"day off\", \"paid leave\", \"vacation\" → ALWAYS classify as \"Leave Request\"\n- This rule has highest priority\n\n4. Other categories:\n- Questions about leave balance or policies → \"HR Policy Query\"\n- Questions about reimbursements, bills, claims → \"Expense Query\"\n- Otherwise → \"Other\"\n\n5. NEVER misclassify a leave request as Expense Query.\n\n6. Do not assume missing information.\n\n7. Give a short explanation (1 line).\n\nYour response MUST be exactly in this format:\nCategory: <category name>|\nExplanation: <brief explanation>",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are an HR Email Classifier AI Assistant.\n\nYour task is to analyze employee emails and classify them into predefined categories.\n\nFollow these rules:\n\n1. Carefully read the email content.\n2. Identify the main intent of the email.\n\n3. STRICT KEYWORD RULE (VERY IMPORTANT):\n- If the email contains words like \"leave\", \"time off\", \"day off\", \"paid leave\", \"vacation\" → ALWAYS classify as \"Leave Request\"\n- This rule has highest priority\n\n4. Other categories:\n- Questions about leave balance or policies → \"HR Policy Query\"\n- Questions about reimbursements, bills, claims → \"Expense Query\"\n- Otherwise → \"Other\"\n\n5. NEVER misclassify a leave request as Expense Query.\n\n6. Do not assume missing information.\n\n7. Give a short explanation (1 line).\n\nYour response MUST be exactly in this format:\nCategory: <category name>|\nExplanation: <brief explanation>"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Analyze the following student email and classify it according to the instructions:\n\n\n\n\n{{email_content}}\n\n\n\n\nRespond ONLY in this format:\nCategory: <category name>|\nExplanation: <brief explanation>",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Analyze the following student email and classify it according to the instructions:\n\n\n\n\n"
+        },
+        {
+          "type": "variable",
+          "rawString": "input.email_content"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\n\n\n\nRespond ONLY in this format:\nCategory: <category name>|\nExplanation: <brief explanation>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:uipath="http://uipath.org/schema/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="x-uipath-initial-diagram" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" exporter="UiPath Studio Web (https://uipath.com)" exporterVersion="f1528820">
+  <bpmn:process id="Process_1" name="Process" isExecutable="false">
+    <bpmn:extensionElements>
+      <uipath:variables version="v1">
+        <uipath:inputOutput id="error" name="Error" type="jsonSchema" elementId="Activity_MXHiTN"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="outMailaddress" name="out_mailaddress" type="string" elementId="Activity_MXHiTN" />
+        <uipath:inputOutput id="outMailsubject" name="out_mailsubject" type="string" elementId="Activity_MXHiTN" />
+        <uipath:inputOutput id="outMailbody" name="out_mailbody" type="string" elementId="Activity_MXHiTN" />
+        <uipath:inputOutput id="error2" name="Error" type="jsonSchema" elementId="Activity_DSMAO2"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="category" name="category" type="string" elementId="Activity_DSMAO2" />
+        <uipath:inputOutput id="explanation" name="explanation" type="string" elementId="Activity_DSMAO2" />
+        <uipath:inputOutput id="error3" name="Error" type="jsonSchema" elementId="Activity_TLOsIt"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="status" name="status" type="string" elementId="Activity_TLOsIt" />
+        <uipath:inputOutput id="employeeEmail" name="employeeEmail" type="string" elementId="Activity_TLOsIt" />
+        <uipath:inputOutput id="category2" name="category" type="string" elementId="Activity_TLOsIt" />
+        <uipath:inputOutput id="fieldsExtracted" name="fieldsExtracted" type="jsonSchema" subType="object" elementId="Activity_TLOsIt"><![CDATA[{"type":"array","description":"Array of extracted fields and their values","items":{"type":"object","properties":{"fieldName":{"type":"string","description":"Name of the extracted field"},"fieldValue":{"type":"string","description":"Value of the extracted field"}}},"$schema":"http://json-schema.org/draft-07/schema#"}]]></uipath:inputOutput>
+        <uipath:inputOutput id="action" name="Action" type="string" elementId="Activity_G0fkz6" />
+        <uipath:inputOutput id="error4" name="Error" type="jsonSchema" elementId="Activity_G0fkz6"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="reviewerComment" name="ReviewerComment" type="string" elementId="Activity_G0fkz6" />
+        <uipath:inputOutput id="error6" name="Error" type="jsonSchema" elementId="Activity_4DvsUH"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="error5" name="Error" type="jsonSchema" elementId="Activity_TMUd9s"><![CDATA[{"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"detail":{"type":"string"},"category":{"type":"string"},"status":{"type":"number"},"element":{"type":"string"}}}]]></uipath:inputOutput>
+        <uipath:inputOutput id="subject" name="subject" type="string" elementId="Activity_TMUd9s" />
+        <uipath:inputOutput id="body" name="body" type="string" elementId="Activity_TMUd9s" />
+      </uipath:variables>
+      <uipath:bindings version="v1">
+        <uipath:binding id="bepV3EERY" name="folderPath" type="string" resource="process" resourceKey="HR_helpdesk_processor" propertyAttribute="folderPath" />
+        <uipath:binding id="bUsvA4DIo" name="name" type="string" default="HR_helpdesk_processor" resource="process" resourceKey="HR_helpdesk_processor" propertyAttribute="name" />
+        <uipath:binding id="beiY17avn" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="Request_category_agent" propertyAttribute="folderPath" />
+        <uipath:binding id="biu6LbnaM" name="name" type="string" default="Request_category_agent" resource="process" resourceSubType="Agent" resourceKey="Request_category_agent" propertyAttribute="name" />
+        <uipath:binding id="bf0Un8OSD" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="Data_extration_agent" propertyAttribute="folderPath" />
+        <uipath:binding id="b9H0iDCB3" name="name" type="string" default="Data_extration_agent" resource="process" resourceSubType="Agent" resourceKey="Data_extration_agent" propertyAttribute="name" />
+        <uipath:binding id="bMZXbGtU1" name="folderPath" type="string" resource="app" resourceKey="HR_approval_app" propertyAttribute="folderPath" />
+        <uipath:binding id="bpxh9eKdo" name="name" type="string" default="HR_approval_app" resource="app" resourceKey="HR_approval_app" propertyAttribute="name" />
+        <uipath:binding id="bK9gfFP4I" name="folderPath" type="string" resource="process" resourceSubType="Agent" resourceKey="Mail_response_agent" propertyAttribute="folderPath" />
+        <uipath:binding id="beQS4NmhO" name="name" type="string" default="Mail_response_agent" resource="process" resourceSubType="Agent" resourceKey="Mail_response_agent" propertyAttribute="name" />
+        <uipath:binding id="b62lYeloV" name="folderPath" type="string" resource="process" resourceKey="Send_response" propertyAttribute="folderPath" />
+        <uipath:binding id="bz6uSAX0F" name="name" type="string" default="Send_response" resource="process" resourceKey="Send_response" propertyAttribute="name" />
+      </uipath:bindings>
+      <uipath:migrationVersion version="11.5" />
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="Event_start" name="Start event">
+      <bpmn:extensionElements>
+        <uipath:entryPointId value="a8f99461-0608-4891-ba52-22d5b76ddec9" />
+      </bpmn:extensionElements>
+      <bpmn:outgoing>edge_dVJPbd</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_MXHiTN" name="HR HELPDESK PROCESSOR">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.bUsvA4DIo" />
+            <uipath:input name="folderPath" type="string" value="=bindings.bepV3EERY" />
+            <uipath:input name="_label" type="string" value="HR_helpdesk_processor" />
+          </uipath:context>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error" />
+          <uipath:output name="out_mailaddress" type="string" source="=out_mailaddress" var="outMailaddress" />
+          <uipath:output name="out_mailsubject" type="string" source="=out_mailsubject" var="outMailsubject" />
+          <uipath:output name="out_mailbody" type="string" source="=out_mailbody" var="outMailbody" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_dVJPbd</bpmn:incoming>
+      <bpmn:outgoing>edge_0vJokw</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_DSMAO2" name="REQUEST CATEGORY AGENT">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartAgentJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.biu6LbnaM" />
+            <uipath:input name="folderPath" type="string" value="=bindings.beiY17avn" />
+            <uipath:input name="_label" type="string" value="Request_category_agent" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"email_content":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"email_content":"=vars.outMailbody"}]]></uipath:input>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error2" />
+          <uipath:output name="category" type="string" source="=category" var="category" />
+          <uipath:output name="explanation" type="string" source="=explanation" var="explanation" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_0vJokw</bpmn:incoming>
+      <bpmn:outgoing>edge_XBJ9Qy</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_TLOsIt" name="DATA EXTRACTION AGENT">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartAgentJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.b9H0iDCB3" />
+            <uipath:input name="folderPath" type="string" value="=bindings.bf0Un8OSD" />
+            <uipath:input name="_label" type="string" value="Data_extration_agent" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"categoryName":{"type":"string"},"categoryExplanation":{"type":"string"},"employeeEmail":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"categoryName":"=vars.category","categoryExplanation":"=vars.explanation","employeeEmail":"=vars.outMailaddress"}]]></uipath:input>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error3" />
+          <uipath:output name="status" type="string" source="=status" var="status" />
+          <uipath:output name="employeeEmail" type="string" source="=employeeEmail" var="employeeEmail" />
+          <uipath:output name="category" type="string" source="=category" var="category2" />
+          <uipath:output name="fieldsExtracted" type="jsonSchema" subType="object" source="=fieldsExtracted" var="fieldsExtracted" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_XBJ9Qy</bpmn:incoming>
+      <bpmn:outgoing>edge_NC06h6</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Activity_G0fkz6" name="HR APPROVAL APP">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Actions.HITL" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.bpxh9eKdo" />
+            <uipath:input name="folderPath" type="string" value="=bindings.bMZXbGtU1" />
+            <uipath:input name="_label" type="string" value="HR_approval_app" />
+            <uipath:input name="taskTitle" type="string" value="AdminApp" />
+            <uipath:input name="recipient" type="json" />
+            <uipath:input name="priority" type="string" />
+            <uipath:input name="labels" type="string" />
+            <uipath:input name="actionCatalogName" type="string" />
+            <uipath:input name="enableActionableNotifications" type="boolean" value="false" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"EmployeeEmail":{"type":"string"},"DetectedCategory":{"type":"string"},"ClassificationStatus":{"type":"string"},"ExtractedFields":{"type":"string"},"CategoryExplanation":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="HitlTaskArguments" type="json" target="bodyField"><![CDATA[{"EmployeeEmail":"=vars.outMailaddress","DetectedCategory":"=vars.category2","ClassificationStatus":"=vars.status","ExtractedFields":"=vars.fieldsExtracted","CategoryExplanation":"=vars.explanation"}]]></uipath:input>
+          <uipath:output name="Action" type="string" source="=Action" var="action" />
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error4" />
+          <uipath:output name="ReviewerComment" type="string" source="=ReviewerComment" var="reviewerComment" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_NC06h6</bpmn:incoming>
+      <bpmn:outgoing>edge_RC3zxN</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Activity_TMUd9s" name="MAIL RESPONSE AGENT">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartAgentJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.beQS4NmhO" />
+            <uipath:input name="folderPath" type="string" value="=bindings.bK9gfFP4I" />
+            <uipath:input name="_label" type="string" value="Mail_response_agent" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"fieldsExtracted":{"type":"array"},"category":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"fieldsExtracted":"=vars.fieldsExtracted","category":"=vars.category"}]]></uipath:input>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error5" />
+          <uipath:output name="subject" type="string" source="=subject" var="subject" />
+          <uipath:output name="body" type="string" source="=body" var="body" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_RC3zxN</bpmn:incoming>
+      <bpmn:outgoing>edge_KEXms8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_4DvsUH" name="SEND RESPONSE">
+      <bpmn:extensionElements>
+        <uipath:activity version="v1">
+          <uipath:type value="Orchestrator.StartJob" version="v2" />
+          <uipath:context>
+            <uipath:input name="name" type="string" value="=bindings.bz6uSAX0F" />
+            <uipath:input name="folderPath" type="string" value="=bindings.b62lYeloV" />
+            <uipath:input name="_label" type="string" value="Send_response" />
+            <uipath:inputSchema type="jsonSchema"><![CDATA[{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","properties":{"in_mailbody":{"type":"string"},"in_mailid":{"type":"string"},"in_mailsubject":{"type":"string"}},"required":[]}]]></uipath:inputSchema>
+          </uipath:context>
+          <uipath:input name="JobArguments" type="json" target="bodyField"><![CDATA[{"in_mailbody":"=vars.body","in_mailid":"=vars.outMailaddress","in_mailsubject":"=vars.subject"}]]></uipath:input>
+          <uipath:output name="Error" type="jsonSchema" source="=Error" var="error6" />
+        </uipath:activity>
+      </bpmn:extensionElements>
+      <bpmn:incoming>edge_KEXms8</bpmn:incoming>
+      <bpmn:outgoing>edge_3KuMkx</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Event_gch7BZ">
+      <bpmn:incoming>edge_3KuMkx</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="edge_dVJPbd" sourceRef="Event_start" targetRef="Activity_MXHiTN" />
+    <bpmn:sequenceFlow id="edge_0vJokw" sourceRef="Activity_MXHiTN" targetRef="Activity_DSMAO2" />
+    <bpmn:sequenceFlow id="edge_XBJ9Qy" sourceRef="Activity_DSMAO2" targetRef="Activity_TLOsIt" />
+    <bpmn:sequenceFlow id="edge_NC06h6" sourceRef="Activity_TLOsIt" targetRef="Activity_G0fkz6" />
+    <bpmn:sequenceFlow id="edge_RC3zxN" sourceRef="Activity_G0fkz6" targetRef="Activity_TMUd9s" />
+    <bpmn:sequenceFlow id="edge_KEXms8" sourceRef="Activity_TMUd9s" targetRef="Activity_4DvsUH" />
+    <bpmn:sequenceFlow id="edge_3KuMkx" sourceRef="Activity_4DvsUH" targetRef="Event_gch7BZ" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
+      <bpmndi:BPMNShape id="S_Event_start" bpmnElement="Event_start">
+        <dc:Bounds x="156" y="206" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="156" y="247" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_MXHiTN" bpmnElement="Activity_MXHiTN">
+        <dc:Bounds x="242.19998168945312" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="242.19998168945312" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_DSMAO2" bpmnElement="Activity_DSMAO2">
+        <dc:Bounds x="409.1999816894531" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="409.1999816894531" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_TLOsIt" bpmnElement="Activity_TLOsIt">
+        <dc:Bounds x="579.1999816894531" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="579.1999816894531" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_G0fkz6" bpmnElement="Activity_G0fkz6">
+        <dc:Bounds x="755.1999816894531" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="755.1999816894531" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_TMUd9s" bpmnElement="Activity_TMUd9s">
+        <dc:Bounds x="934.1999816894531" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="934.1999816894531" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Activity_4DvsUH" bpmnElement="Activity_4DvsUH">
+        <dc:Bounds x="1125.489500223275" y="184" width="100" height="80" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1125.489500223275" y="269" width="100" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Event_gch7BZ" bpmnElement="Event_gch7BZ">
+        <dc:Bounds x="1292.6488720608925" y="206" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1292.6488720608925" y="247" width="36" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_dVJPbd" bpmnElement="edge_dVJPbd">
+        <di:waypoint x="192" y="224" />
+        <di:waypoint x="242.19998168945312" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_0vJokw" bpmnElement="edge_0vJokw">
+        <di:waypoint x="342.1999816894531" y="224" />
+        <di:waypoint x="409.1999816894531" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_XBJ9Qy" bpmnElement="edge_XBJ9Qy">
+        <di:waypoint x="509.1999816894531" y="224" />
+        <di:waypoint x="579.1999816894531" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_NC06h6" bpmnElement="edge_NC06h6">
+        <di:waypoint x="679.1999816894531" y="224" />
+        <di:waypoint x="755.1999816894531" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_RC3zxN" bpmnElement="edge_RC3zxN">
+        <di:waypoint x="855.1999816894531" y="224" />
+        <di:waypoint x="934.1999816894531" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_KEXms8" bpmnElement="edge_KEXms8">
+        <di:waypoint x="1034.1999816894531" y="224" />
+        <di:waypoint x="1125.489500223275" y="224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_edge_3KuMkx" bpmnElement="edge_3KuMkx">
+        <di:waypoint x="1225.489500223275" y="224" />
+        <di:waypoint x="1292.6488720608925" y="224" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

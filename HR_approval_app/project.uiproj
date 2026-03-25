@@ -1,0 +1,10 @@
+{
+  "ProjectType": "WebApp",
+  "WebAppSettings": {
+    "AppId": "ID10866dfd392b43cc9ca3061cad3bc734",
+    "IsCoreProject": true
+  },
+  "Name": "HR_approval_app",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

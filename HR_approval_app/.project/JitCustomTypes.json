@@ -1,0 +1,110 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "wb63KmTdW8zvNcFloCTNO6BdPYsQlVgeH8x39rkI4Q",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [
+    "Apps.form.MainPage.gJWhabmuE3gg",
+    "Apps.form.MainPage.Expressions.Gye571J554L1gC48zVYTJN",
+    "Apps.action.gIvXzrx6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.gvwoI4h6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.Wm04Z3NJz4F1ghRgp2qTuST1",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.l6YrtFxGjD1QxUxW3eNNOr2",
+    "Apps.form.HrEmailClassificationPagePage.gozIe5B6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.mviMN32w1JD1BMaBc3hr4qM2",
+    "Apps.form.HrEmailClassificationPagePage.gq244x6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.jXLwP8juJL1TnlkD4a0PWn"
+  ],
+  "discardedAssemblyReplacements": {
+    "Apps.form.MainPage.gJWhabmuE3gg": "Apps.form.MainPage.gsMmKMW2E3gg",
+    "Apps.form.MainPage.Expressions.Gye571J554L1gC48zVYTJN": "Apps.form.MainPage.Expressions.7nbLf3pHg2K1gDjNrUJ9fX4",
+    "Apps.action.gIvXzrx6F3gg": "Apps.action.g9JxE1B6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.gvwoI4h6F3gg": "Apps.form.HrEmailClassificationPagePage.gozIe5B6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.Wm04Z3NJz4F1ghRgp2qTuST1": "Apps.form.HrEmailClassificationPagePage.Expressions.l6YrtFxGjD1QxUxW3eNNOr2",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.l6YrtFxGjD1QxUxW3eNNOr2": "Apps.form.HrEmailClassificationPagePage.Expressions.jXLwP8juJL1TnlkD4a0PWn",
+    "Apps.form.HrEmailClassificationPagePage.gozIe5B6F3gg": "Apps.form.HrEmailClassificationPagePage.gq244x6F3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.mviMN32w1JD1BMaBc3hr4qM2": "Apps.form.HrEmailClassificationPagePage.Expressions.lj7uq1b2VcE1fV9f93iYspH3",
+    "Apps.form.HrEmailClassificationPagePage.gq244x6F3gg": "Apps.form.HrEmailClassificationPagePage.gs9pl3aH3gg",
+    "Apps.form.HrEmailClassificationPagePage.Expressions.jXLwP8juJL1TnlkD4a0PWn": "Apps.form.HrEmailClassificationPagePage.Expressions.mviMN32w1JD1BMaBc3hr4qM2"
+  },
+  "assembliesJitInfo": {
+    "Apps.form.MainPage.gJWhabmuE3gg": {
+      "createdAt": "2026-03-17T21:23:28.3035479+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "Controls.MainPage"
+      ],
+      "metadata": {
+        "ModelStableFormId": "id3aec3d096e1748c7a8b2526fca16f089"
+      }
+    },
+    "Apps.form.MainPage.gsMmKMW2E3gg": {
+      "createdAt": "2026-03-18T03:06:07.02+05:30",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "Controls.MainPage"
+      ],
+      "metadata": {
+        "ModelStableFormId": "id3aec3d096e1748c7a8b2526fca16f089"
+      }
+    },
+    "Apps.action.gIvXzrx6F3gg": {
+      "createdAt": "2026-03-18T18:46:38.3423769+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "__Action_ActionSchema.outcomes",
+        "action.ActionProperties"
+      ],
+      "metadata": {
+        "ModelStableFormId": "action"
+      }
+    },
+    "Apps.action.g9JxE1B6F3gg": {
+      "createdAt": "2026-03-18T18:47:39.0381282+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "__Action_ActionSchema.outcomes",
+        "action.ActionProperties"
+      ],
+      "metadata": {
+        "ModelStableFormId": "action"
+      }
+    },
+    "Apps.form.HrEmailClassificationPagePage.gozIe5B6F3gg": {
+      "createdAt": "2026-03-18T18:48:05.6319951+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "Controls.HrEmailClassificationPagePage"
+      ],
+      "metadata": {
+        "ModelStableFormId": "id0baa1893b3f74da9af5777c28080dedf"
+      }
+    },
+    "Apps.form.HrEmailClassificationPagePage.gq244x6F3gg": {
+      "createdAt": "2026-03-18T18:48:44.3676316+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "Controls.HrEmailClassificationPagePage"
+      ],
+      "metadata": {
+        "ModelStableFormId": "id0baa1893b3f74da9af5777c28080dedf"
+      }
+    },
+    "Apps.form.HrEmailClassificationPagePage.gs9pl3aH3gg": {
+      "createdAt": "2026-03-21T18:20:55.6594699+00:00",
+      "providerName": "Apps",
+      "rootNamespace": "\u003Cundefined\u003E",
+      "typeNames": [
+        "Controls.HrEmailClassificationPagePage"
+      ],
+      "metadata": {
+        "ModelStableFormId": "id0baa1893b3f74da9af5777c28080dedf"
+      }
+    }
+  }
+}

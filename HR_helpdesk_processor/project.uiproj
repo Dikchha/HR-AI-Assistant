@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "HR_helpdesk_processor",
+  "Description": null,
+  "MainFile": "Main.xaml"
+}

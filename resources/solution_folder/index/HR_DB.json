@@ -1,0 +1,27 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "HR_DB",
+    "kind": "index",
+    "apiVersion": "ecs.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "files": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "HR_DB",
+      "description": "info of emp",
+      "indexConfigurationJson": "{\u0022Version\u0022:3,\u0022Provider\u0022:3,\u0022DataSource\u0022:{\u0022Type\u0022:1,\u0022Properties\u0022:{\u0022folderName\u0022:\u0022Shared\u0022,\u0022directoryPath\u0022:\u0022/\u0022,\u0022storageBucketName\u0022:\u0022HR_DB\u0022,\u0022storageBucketId\u0022:\u002200000000-0000-0000-0000-000000000000\u0022,\u0022fileNameGlob\u0022:\u0022**/*\u0022}}}",
+      "fileNameGlob": "All",
+      "includeSubfolders": true,
+      "ingestionType": "Advanced"
+    },
+    "locks": [],
+    "key": "4fc85f24-d29d-4b00-05c6-08de86acdfbd"
+  }
+}

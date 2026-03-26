@@ -1,6 +1,6 @@
 #  HR AI Assistant – Intelligent Automation using UiPath
 
-This project presents an **AI-powered HR automation system** built using UiPath Agentic AI.mIt automates the complete lifecycle of HR email handling from **classification and data extraction to decision making and response generation**. The solution demonstrates how **AI + RPA + Excel-based structured data** can be combined to create efficient, scalable, and business-ready workflows.
+This project presents an **AI-powered HR automation system** built using UiPath Agentic AI. It automates the complete lifecycle of HR email handling from **classification and data extraction to decision making and response generation**. The solution demonstrates how **AI + RPA + Excel-based structured data** can be combined to create efficient, scalable, and business-ready workflows.
 
 ---
 
